@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-image: url("https://i.pinimg.com/1200x/b1/c3/ab/b1c3ab08cae0fbfc70d09f9d2ef888aa.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -16,47 +16,60 @@ body {
 /* DARK MODE */
 .dark-mode {
   background: #121212;
-  color: #f0f0f0;
+  color: #fff;
 }
 
 /* NAVBAR */
 .navbar {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  background: rgba(34,139,34,0.95); /* agriculture green */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  background: rgba(46,125,50,0.85);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 25px;
+  border-radius: 16px;
   z-index: 1000;
-  border-bottom: 2px solid #2e7d32;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .logo {
   color: #fff;
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 /* HAMBURGER + DARK MODE TOGGLE */
 .hamburger {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 28px;
   color: white;
   cursor: pointer;
 }
 
 .menu-toggle {
-  padding: 5px 8px;
+  padding: 6px 10px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   background: white;
-  color: black;
+  color: #2e7d32;
   font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-toggle:hover {
+  background: #2e7d32;
+  color: white;
 }
 
 /* NAV LINKS */
@@ -67,7 +80,7 @@ body {
   top: 60px;
   right: 20px;
   background: #2e7d32;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 #nav-links a {
@@ -75,8 +88,15 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   display: block;
+  border-radius: 8px;
+  transition: 0.2s;
 }
 
+#nav-links a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* SHOW NAV LINKS */
 #nav-links.show {
   display: flex;
 }
@@ -84,17 +104,17 @@ body {
 /* HERO */
 .hero {
   height: 500px;
-  background-image: url("bg.jpg"); /* palitan ng actual background */
+  background-image: url("bg.jpg"); /* palitan ng actual hero image */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px;
   border-radius: 16px;
   position: relative;
-  margin: 80px auto 40px auto;
+  margin: 40px auto;
   max-width: 1000px;
 }
 
@@ -115,51 +135,49 @@ body {
 
 /* SECTIONS */
 .section {
-  background: rgba(240,255,240,0.95); /* light agriculture tone */
+  background: rgba(224,228,241,0.95);
   margin: 40px auto;
   padding: 40px;
   border-radius: 16px;
   max-width: 1000px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .dark-mode .section {
-  background: rgba(30,50,30,0.95);
+  background: rgba(30,30,30,0.95);
 }
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 180px;
+  width: 200px;
   margin-top: 20px;
   border-radius: 12px;
 }
 
 /* PRODUCTS */
 .product {
-  background: #8bc34a; /* earthy green */
+  background: #2be73b;
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
   cursor: pointer;
-  color: white;
   font-weight: bold;
 }
 
 .price {
   display: none;
   margin-left: 10px;
+  font-weight: bold;
 }
 
-.price-note, .hint {
+.price-note,
+.hint {
   font-style: italic;
-  color: #555;
 }
 
 /* GALLERY */
 .sub-title {
   text-align: center;
   margin: 30px 0 20px;
-  color: #2e7d32;
 }
 
 .gallery {
@@ -172,12 +190,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
-  background: #f1f8e9;
-  transition: transform 0.3s;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
+  background: white;
 }
 
 .gallery-item img {
@@ -190,7 +203,6 @@ body {
   text-align: center;
   padding: 10px;
   font-size: 14px;
-  color: #333;
 }
 
 /* FOOTER */
@@ -198,8 +210,8 @@ footer {
   text-align: center;
   padding: 20px;
   color: white;
-  background: #2e7d32;
 }
+
 
 
 
