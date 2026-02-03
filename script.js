@@ -1,13 +1,20 @@
-// Dark mode toggle
-const toggle = document.getElementById("themeToggle");
-if (toggle) {
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-    });
+// DARK MODE TOGGLE
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// HAMBURGER MENU
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("show");
 }
 
-// Show/hide price
-function togglePrice(element) {
-    const price = element.querySelector(".price");
-    price.style.display = price.style.display === "inline" ? "none" : "inline";
+function closeMenu() {
+  document.getElementById("nav-links").classList.remove("show");
 }
+
+// PRODUCT PRICE TOGGLE
+function togglePrice(el) {
+  const price = el.querySelector(".price");
+  price.style.display = price.style.display === "inline" ? "none" : "inline";
+}
+
