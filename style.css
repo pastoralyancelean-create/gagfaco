@@ -103,7 +103,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 600px;
+  height: 700px;
   background-image: url("bg.jpg"); /* palitan ng actual hero image */
   background-size: cover;
   background-position: center;
@@ -211,6 +211,7 @@ footer {
   padding: 20px;
   color: white;
 }
+
 
 
 
