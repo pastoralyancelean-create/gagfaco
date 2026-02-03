@@ -16,11 +16,16 @@
   <header class="navbar">
     <div class="logo">🌾 GAGFACO</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      ☰
-      <button id="themeToggle" class="menu-toggle">🌓</button>
+    <!-- RIGHT CONTROLS -->
+    <div class="hamburger-controls">
+      <!-- DARK MODE -->
+      <button id="themeToggle" class="menu-toggle" title="Toggle dark mode">🌓</button>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
 
+    <!-- NAV LINKS -->
     <nav id="nav-links">
       <a href="#home" onclick="closeMenu()">Home</a>
       <a href="#about" onclick="closeMenu()">About</a>
@@ -49,7 +54,7 @@
     <div class="product" onclick="togglePrice(this)">16-20-0 <span class="price">₱1,470 / sack</span></div>
     <div class="product" onclick="togglePrice(this)">25-0-0 <span class="price">₱910 / sack</span></div>
     <div class="product" onclick="togglePrice(this)">21-0-0 <span class="price">₱810 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">46-0-0w/zinc <span class="price">₱1,800 / sack</span></div>
+    <div class="product" onclick="togglePrice(this)">46-0-0 w/ zinc <span class="price">₱1,800 / sack</span></div>
 
     <p class="hint">Click a product to view price</p>
   </section>
@@ -69,7 +74,7 @@
         <img src="seminar1.jpg" alt="Seminar 1">
         <div class="caption">
           <strong>Gloria Coops with CDA Field CDS Sir Cristian de Ade. Coco Summit</strong><br>
-          <span>Nov 13-14, 2024 @ Tayabas, Quezon</span>
+          <span>Nov 13–14, 2024 @ Tayabas, Quezon</span>
         </div>
       </div>
 
@@ -113,8 +118,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
