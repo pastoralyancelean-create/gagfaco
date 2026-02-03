@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAGFACO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>G. Antonino, Gloria, Farmers, Agriculture, Cooperative</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
+
+<section id="home" class="section hero">
+    <h2>Quality Fertilizers for Rice Farmers</h2>
+    <p>Trusted agricultural supply store for Rice Farmers.</p>
+    <img src="profile.png" alt="Agri Store" class="profile-png">
+</section>
+
+<section id="products" class="section">
+    <h2>Our Fertilizers</h2>
+
+    <div class="product" onclick="togglePrice(this)">
+        14-14-14
+        <span class="price">₱1,630 / sack</span>
+    </div>
+
+    <div class="product" onclick="togglePrice(this)">
+        46-0-0
+        <span class="price">₱1,700 / sack</span>
+    </div>
+
+    <div class="product" onclick="togglePrice(this)">
+        17-0-0
+        <span class="price">₱1,530 / sack</span>
+    </div>
+
+    <div class="product" onclick="togglePrice(this)">
+        16-20-0
+        <span class="price">₱1,470 / sack</span>
+    </div>
+
+      <div class="product" onclick="togglePrice(this)">
+        25-0-0
+        <span class="price">₱910 / sack</span>
+    </div>
+
+    <p class="hint">Click a product to view price</p>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+        G. Antonino, Gloria, Farmers, Agriculture, Cooperative supports rice farmers by providing
+        quality fertilizers at fair prices to improve harvest yield.
+    </p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>📍 Barangay G. Antonino, Sitio Bawasanta, Gloria, Oriental Mindoro  Philippines</p>
+    <p>📞 0927-866-6052</p>
+    <p>📧 <a href="mailto:greengrow@gmail.com">jonamariepastoral@gmail.com</a></p>
+</section>
+
+<footer>
+    <p>@ 2023-2026 GAGFACO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
