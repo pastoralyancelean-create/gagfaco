@@ -2,121 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAGFACO</title>
+  <title>Maangas UI</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: rgba(15, 23, 42, 0.8);
+      --accent: #22c55e;
+      --text: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #020617, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+    }
+
+    .card {
+      width: 350px;
+      padding: 30px;
+      border-radius: 20px;
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.25);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+    }
+
+    .icon {
+      font-size: 50px;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 25px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      letter-spacing: 2px;
+      box-shadow: 0 0 25px #22c55e;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🌾 GAGFACO</div>
-
-    <div class="hamburger" onclick="toggleMenu()">
-      ☰
-      <button id="themeToggle" class="menu-toggle">🌓</button>
+  <div class="card">
+    <div class="icon">
+      <i class="fa-solid fa-bolt"></i>
     </div>
 
-    <nav id="nav-links">
-      <a href="#home" onclick="closeMenu()">Home</a>
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#products" onclick="closeMenu()">Products</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-    </nav>
-  </header>
+    <h1>MAANGAS UI</h1>
+    <p>Dark • Neon • Smooth • Clean Design</p>
 
-  <!-- HERO -->
-  <section id="home" class="hero" data-aos="flip-right">
-    <div class="hero-content">
-      <h1>Quality Fertilizers for Rice Farmers</h1>
-      <p>Trusted agricultural supply store for Rice Farmers.</p>
-      <img src="profile.png" alt="Agri Store" class="profile-img">
+    <button>GET STARTED</button>
+
+    <div class="footer">
+      Built with HTML & CSS
     </div>
-  </section>
+  </div>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="section" data-aos="flip-left">
-    <h2>Our Fertilizers</h2>
-    <p class="price-note">Note: Prices are subject to change</p>
-
-    <div class="product" onclick="togglePrice(this)">14-14-14 <span class="price">₱1,630 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">46-0-0 <span class="price">₱1,700 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">17-0-0 <span class="price">₱1,530 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">16-20-0 <span class="price">₱1,470 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">25-0-0 <span class="price">₱910 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">21-0-0 <span class="price">₱810 / sack</span></div>
-    <div class="product" onclick="togglePrice(this)">46-0-0w/zinc <span class="price">₱1,800 / sack</span></div>
-
-    <p class="hint">Click a product to view price</p>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section" data-aos="flip-right">
-    <h2>About Us</h2>
-    <p>
-      G. Antonino, Gloria, Farmers, Agriculture, Cooperative supports rice farmers
-      by providing quality fertilizers at fair prices.
-    </p>
-
-    <h3 class="sub-title">Activities & Seminars Attended</h3>
-
-    <div class="gallery">
-      <div class="gallery-item" data-aos="fade-up">
-        <img src="seminar1.jpg" alt="Seminar 1">
-        <div class="caption">
-          <strong>Gloria Coops with CDA Field CDS Sir Cristian de Ade. Coco Summit</strong><br>
-          <span>Nov 13-14, 2024 @ Tayabas, Quezon</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-aos="fade-down">
-        <img src="seminar2.jpg" alt="Seminar 2">
-        <div class="caption">
-          <strong>Agriculture Training</strong><br>
-          <span>June 10, 2024</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-aos="fade-up">
-        <img src="seminar3.jpg" alt="Seminar 3">
-        <div class="caption">
-          <strong>Farmers Cooperative Meeting</strong><br>
-          <span>September 2, 2024</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section" data-aos="flip-left">
-    <h2>Contact Us</h2>
-    <p>📍 Gloria, Oriental Mindoro, Philippines</p>
-    <p>📞 0927-866-6052</p>
-    <p>📧 jonamariepastoral@gmail.com</p>
-    <p>📧 gaudencioantoninogloria2023@gmail.com</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© All Rights Reserved 2023–2026 GAGFACO</p>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
 </body>
 </html>
-
-
-
-
 
 
 
